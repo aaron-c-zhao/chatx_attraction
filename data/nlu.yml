@@ -1,0 +1,960 @@
+version: "2.0"
+
+nlu:
+
+- lookup: attraction
+  examples: |
+    - Scuba & Snorkeling
+    - Paint & Pottery Studios
+    - Game & Entertainment Centers
+    - Rides & Activities
+    - Private Tours
+    - Self-Guided Tours & Rentals
+    - Theaters
+    - Water Parks
+    - Movie Theaters
+    - Sacred & Religious Sites
+    - Bars & Clubs
+    - Gardens
+    - Historic Sites
+    - Historic Walking Areas
+    - Specialty Museums
+    - Points of Interest & Landmarks
+    - Bar, Club & Pub Tours
+    - Art Galleries
+    - Day Trips
+    - Boat Tours
+    - Architectural Buildings
+    - Coffee & Tea Tours
+    - Spas
+    - Food Tours
+    - Bowling Alleys
+    - Room Escape Games
+    - Scavenger Hunts
+    - Libraries
+    - Monuments & Statues
+    - Art Museums
+    - Churches & Cathedrals
+    - Sports Complexes
+    - Breweries
+    - Adrenaline & Extreme Tours
+    - Bike Tours
+    - Antique Stores
+    - Sightseeing Tours
+    - Parks
+    - Hiking & Camping Tours
+    - History Museums
+    - Scenic Drives
+    - Scenic Walking Areas
+    - Neighborhoods
+    - Science Museums
+    - Walking Tours
+    - Yoga & Pilates
+    - Water Sports
+    - Lessons & Workshops
+    - Factory Tours
+    - Gear Rentals
+    - Other Outdoor Activities
+    - Boat Rentals
+    - Gift & Specialty Shops
+    - Other Nature & Parks
+    - Horse-Drawn Carriage Tours
+    - City Tours
+    - Gay Clubs & Bars
+    - Cultural Tours
+    - Photography Tours
+    - Historical & Heritage Tours
+    - Dance Clubs & Discos
+    - Hiking Trails
+    - aaronzhao@azd:~/Projects/chatx$ 
+    - Hiking Trails
+
+
+- intent: tobot.greet
+  examples: |
+    - @bOt hey
+    - @Bot hello
+    - @bOt hi
+    - @boT good morning
+    - @boT good evening
+    - @Bot hey there
+    - @BOT hi there
+    - @bOt hello there
+    - @BOT greetings
+    - @BOT Hi
+    - @boT helo
+    - @bOt Hi!
+    - @bOT Hi'
+    - @BOt Hi,
+    - @bOt Hi, bot
+    - @BOt Hieee
+    - @bOT Hieeeeeeeeeeeee
+    - @BoT Hola
+    - @BOT What is up?
+    - @BoT Whats up
+    - @BOt Whats up my bot
+    - @BOt Whats up?
+    - @BoT ayyyy whaddup
+    - @Bot bonjour
+    - @bOt ey boss
+    - @boT I said, helllllloooooO!!!!
+    - @BOT Well hello there ;)
+
+- intent: tobot.goodbye
+  examples: |
+    - @BoT bye
+    - @bot goodbye
+    - @BOT see you around
+    - @bOT see you later
+    - @bot see ya
+    - @boT buh bye
+    - @BoT Bye
+    - @BOt Bye bye
+    - @BOt adios
+    - @bOt adios?
+    - @BOT bye :P
+    - @BoT bye bot
+    - @Bot bye bye
+    - @BoT bye bye bot
+    - @BOt bye for now
+    - @bot bye udo
+    - @Bot bye was nice talking to you
+    - @boT bye!
+    - @BOT byee
+    - @BOT catch you later
+    - @boT ciao
+    - @BOT cya
+    - @bot farewell
+    - @Bot good bye
+    - @BOt good bye rasa bot!
+    - @bOT good night
+    - @boT goodbye
+    - @boT goodbye.
+    - @Bot goodnight
+    - @BoT gotta go
+    - @boT ok Bye
+    - @bOT ok bye
+    - @BoT ok, bye
+    - @bOt ok.bye
+    - @Bot see u later
+    - @bOT see ya
+    - @Bot see you
+    - @bot see you . bye
+    - @boT take care
+    - @BOt then bye
+    - @BoT tlak to you later
+    - @boT toodle-oo
+    - @bOt byr
+
+- intent: tobot.thank
+  examples: |
+    - @BOt thanks!
+    - @bOt thank you
+    - @BOt thanks a lot
+    - @BoT great thanks
+    - @bot appreciate it
+    - @BoT cool thanks
+    - @Bot Cool. Thanks
+    - @bOt Great, thanks
+    - @boT Thank you so much
+    - @BOt Thank's!
+    - @BoT Thanks bot
+    - @BoT Thanks for that
+    - @BoT Thanks!
+    - @Bot amazing, thanks
+    - @BOT cool thank you
+    - @bot cool, thanks
+    - @bOt danke
+    - @BoT great thanks
+    - @Bot ok thanks
+    - @bot ok thanks
+    - @bOt ok thanks!
+    - @bOT perfect thank you
+    - @Bot thank u
+    - @Bot thank you
+    - @boT thank you anyways
+    - @bot thanks
+    - @boT thanks a bunch for everything
+    - @BOT thanks a lot
+    - @BoT thanks for the help
+    - @BoT thanks you
+    - @bOT thanks!
+    - @BoT thankyou
+    - @BoT thnks
+    - @BOt thx
+    - @boT yes thanks
+    - @BOt thanks for your information
+    - @bot thanks f
+- intent: tobot.affirm
+  examples: |
+    - @bOt yes
+    - @bOT yes please
+    - @bOT yes I would
+    - @bot please do
+    - @bot yup
+    - @BOt yep
+    - @BOT that's right
+    - @Bot indeed
+    - @Bot Yes, please
+    - @boT yeah
+    - @boT sure
+    - @bOt yes thanks
+    - @Bot That would be great
+    - @bot YES
+    - @bOT YUP
+    - @Bot Yea
+    - @bOT Yeah
+    - @boT Yeah sure
+    - @bot Yep
+    - @BoT Yep that's fine
+    - @BoT Yep!
+    - @bot Yepp
+    - @BOt Yes
+    - @BOT Yes I do
+    - @bOT Yes please
+    - @boT Yes please!
+    - @Bot Yes, I accept
+    - @bOt sounds good
+- intent: tobot.deny
+  examples: |
+    - @bot no
+    - @BOT nope
+    - @bot no thanks
+    - @bOt not that one
+    - @BOT don't use that
+    - @bOT please no
+    - @boT no don't do that
+    - @bot no, use abraham.lincoln@example.com
+    - @bot Neither
+    - @boT Never
+    - @BoT Nevermind
+    - @BoT No thank you
+    - @Bot No, not really.
+    - @BoT No, thank you
+    - @bot No.
+    - @bOt Nopes
+    - @BOT Not really
+    - @bot absolutely not
+    - @BOt decline
+    - @BoT definitely not
+    - @BoT deny
+    - @boT na
+    - @Bot nah
+    - @bOT nah I'm good
+- intent: bot_challenge
+  examples: |
+    - @Bot are you a bot?
+    - @bOT are you a human?
+    - @Bot am I talking to a bot?
+    - @BoT am I talking to a human?
+    - @bOt you are a bot right
+    - @BOt aren't you a bot
+    - @BOt Are you a bot?
+    - @bot are you a BOT
+    - @boT are you a bot?
+    - @Bot are you a chatbot
+    - @bot are you a rasa bot?
+    - @boT are you a real bot?
+    - @Bot are you a robot
+    - @BOT are you ai
+    - @BoT are you artificial
+    - @Bot are you artificial intelligence
+    - @bOt are you bot
+    - @boT are you bot?
+    - @bOt are you rasa bot?
+    - @bot are you real
+    - @bot are you real lol
+    - @BOt are you really a bot
+    - @bOt are you robot
+    - @BOt are you sure that you're a bot?
+    - @bOt bot?
+    - @boT cuz you are a bot
+    - @bot i guess you are a chatbot
+    - @BoT oh are you chatbot?
+    - @bot tell me, are you a bot?
+    - @bot what are you, a bot?
+    - @boT you are a robot
+    - @BoT you are ai
+    - @bOT you are chatbot
+    - @boT you're a bot
+    - @boT you robo
+    - @bot real bot then?
+    - @BOt are you really a bbot?
+
+- intent: tobot.help
+  examples: |
+    - @bOT I need help
+    - @bOT what can you help me with
+    - @boT can you help me
+    - @bOT what can you do
+    - @bot I need some help
+    - @BOt help me
+    - @BoT can you please help me
+    - @bot problem
+    - @boT big problem
+    - @bot How can you help me
+    - @BoT How you help me?
+    - @boT I need some help
+    - @bOt What are my options
+    - @bOT What are you able to do?
+    - @BoT What can I ask you?
+    - @Bot What can I do?
+    - @bot What can you demo
+    - @bOt What can you do for me?
+    - @Bot What can you do?
+    - @bot What can you tell me?
+    - @BOt What do you do
+    - @bOt anything els
+    - @bot are there any other options?
+    - @bOt can I ask you anything else?
+    - @BOT can you do anything else?
+    - @BOT can you help me?
+    - @Bot come back
+    - @BoT cool! can I do something else here?
+    - @boT hello what can you do for me
+    - @boT help
+    - @BOt help me
+    - @boT help please
+    - @boT help pls
+    - @bot help?
+    - @BOT hep me
+- intent: tobot.out_of_scope
+  examples: |
+    - @BOt what is the square root of 5
+    - @Bot I want to know the weather
+    - @BOT what is the meaning of life.
+    - @BOt Fridge Isn't Running
+    - @Bot my tv isn't working
+    - @BOT my washing machine isn't working
+    - @bOt what year is it
+    - @boT what is the weather today
+    - @BOT what is the weather
+    - @boT how old are you?
+    - @BOt add two plus two
+    - @Bot Hdjejene
+    - @BOt asd
+    - @BOT title
+    - @boT how about the forecast
+    - @bOT foolish
+    - @bot joke
+    - @boT Can YouTube talk?
+    - @BOt Can you call me back ?
+    - @BOt Can you give me your datacenter's password
+    - @BoT Can you give me your datacenter's password?
+    - @Bot Can you please send me an uber
+- intent: tobot.inform
+  examples: |
+    - @BoT I like [hiking](attraction) food
+    - @BOt I prefer [city tour](attraction) food
+    - @boT [water sports](attraction)
+    - @bot [Parks](attraction) 
+    - @BOT I love [Factory Tours](attraction)
+    - @bOt I don't mind [Theaters](attraction)
+    - @BOT I really like [Libraries](attraction)
+    - @BOt [Musums](attraction) is interesting 
+    - @BoT I'd rather go to a [Spa](attraction)
+    - @Bot Any kind of [meat](attraction)
+    - @bot [fish](cuisine)
+    - @BOt let's have a [private tour](attraction)
+    - @bot how about [Art museums](attraction)
+    - @boT [water park](attraction) sounds good
+    - @BOt somewhere in [Delft](location)
+    - @BoT somewhere near the [central station](location)
+    - @bOT let's find something to eat in [Rotterdam](location)
+    - @BOT [den hoven](location)
+
+- intent: tobot.search_for_restaurant 
+  examples: |
+    - @bOT Can you recommand me a local attraction?
+    - @Bot I don't know what to visit?
+    - @bOt I'm looking for attractions.
+    - @Bot attractions
+    - @bot attraction
+    - @BoT find me a attraction
+    - @bOt find me somewhere to visit
+    - @BOt can you recommand some place to have fun 
+    - @BOt please help me find a [museum](attraction) 
+    - @bOT local attraction 
+    - @Bot I want to visit museum
+    - @bot museum
+    - @BoT find me local attractions
+    - @bOt I'm looking for somewhere interesting to visit 
+    - @BOt exhibitions 
+    - @BOt a place to visit
+
+- intent: group_chat
+  examples: | 
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hi there
+    - hello there
+    - greetings
+    - Hi
+    - helo
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeeeeeeeeee
+    - Hola
+    - What is up?
+    - Whats up
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - bonjour
+    - ey boss
+    - I said, helllllloooooO!!!!
+    - Well hello there ;)
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - see ya
+    - buh bye
+    - Bye
+    - Bye bye
+    - adios
+    - adios?
+    - bye :P
+    - bye bot
+    - bye bye
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - ciao
+    - cya
+    - farewell
+    - good bye
+    - good bye rasa bot!
+    - good night
+    - goodbye
+    - goodbye.
+    - goodnight
+    - gotta go
+    - ok Bye
+    - ok bye
+    - ok, bye
+    - ok.bye
+    - see u later
+    - see ya
+    - see you
+    - see you . bye
+    - take care
+    - then bye
+    - tlak to you later
+    - toodle-oo
+    - byr
+    - thanks!
+    - thank you
+    - thanks a lot
+    - great thanks
+    - appreciate it
+    - cool thanks
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you so much
+    - Thank's!
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cool thank you
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+    - ok thanks
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks a lot
+    - thanks for the help
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thanks f
+    - yes
+    - yes please
+    - yes I would
+    - please do
+    - yup
+    - yep
+    - that's right
+    - indeed
+    - Yes, please
+    - yeah
+    - sure
+    - yes thanks
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+    - sounds good
+    - no
+    - nope
+    - no thanks
+    - not that one
+    - don't use that
+    - please no
+    - no don't do that
+    - no, use abraham.lincoln@example.com
+    - Neither
+    - Never
+    - Nevermind
+    - No thank you
+    - No, not really.
+    - No, thank you
+    - No.
+    - Nopes
+    - Not really
+    - absolutely not
+    - decline
+    - definitely not
+    - deny
+    - na
+    - nah
+    - nah I'm good
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - you are a bot right
+    - aren't you a bot
+    - Are you a bot?
+    - are you a BOT
+    - are you a bot?
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a robot
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you bot
+    - are you bot?
+    - are you rasa bot?
+    - are you real
+    - are you real lol
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - cuz you are a bot
+    - i guess you are a chatbot
+    - oh are you chatbot?
+    - tell me, are you a bot?
+    - what are you, a bot?
+    - you are a robot
+    - you are ai
+    - you are chatbot
+    - you're a bot
+    - you robo
+    - real bot then?
+    - are you really a bbot?
+    - I need help
+    - what can you help me with
+    - can you help me
+    - what can you do
+    - I need some help
+    - help me
+    - can you please help me
+    - problem
+    - big problem
+    - How can you help me
+    - How you help me?
+    - I need some help
+    - What are my options
+    - What are you able to do?
+    - What can I ask you?
+    - What can I do?
+    - What can you demo
+    - What can you do for me?
+    - What can you do?
+    - What can you tell me?
+    - What do you do
+    - anything els
+    - are there any other options?
+    - can I ask you anything else?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - hep me
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - my washing machine isn't working
+    - what year is it
+    - what is the weather today
+    - what is the weather
+    - how old are you?
+    - add two plus two
+    - Hdjejene
+    - asd
+    - title
+    - how about the forecast
+    - foolish
+    - joke
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you please send me an uber
+    - I like [hiking](attraction)
+    - I prefer [city tour](attraction)
+    - [water sports](attraction)
+    - [Parks](attraction) 
+    - I love [Factory Tours](attraction)
+    - I don't mind [Theaters](attraction)
+    - I really like [Libraries](attraction)
+    - [Musums](attraction) is interesting 
+    - I'd rather go to a [Spa](attraction)
+    - Any kind of [meat](attraction)
+    - [fish](cuisine)
+    - let's have a [private tour](attraction)
+    - how about [Art museums](attraction)
+    - [water park](attraction) sounds good
+    - somewhere in [Delft](location)
+    - somewhere near the [central station](location)
+    - let's find something to eat in [Rotterdam](location)
+    - [den hoven](location)
+    - Can you recommand me a local attraction?
+    - I don't know what to visit?
+    - I'm looking for attractions.
+    - attractions
+    - attraction
+    - find me a attraction
+    - find me somewhere to visit
+    - can you recommand some place to have fun 
+    - please help me find a [museum](attraction) 
+    - local attraction 
+    - I want to visit museum
+    - museum
+    - find me local attractions
+    - I'm looking for somewhere interesting to visit 
+    - exhibitions 
+    - a place to visit
+    - @bOhey
+    - @b hello
+    - @oThi
+    - @Bgood morning
+    - @good evening
+    - @ot hey there
+    - @b hi there
+    - @bthello there
+    - @ot greetings
+    - @boHi
+    - @B helo
+    - @BT Hi!
+    - @BT Hi'
+    - @b Hi,
+    - @bHi, bot
+    - @oTHieee
+    - @bo Hieeeeeeeeeeeee
+    - @BT Hola
+    - @BT What is up?
+    - @BT Whats up
+    - @Bo Whats up my bot
+    - @Whats up?
+    - @bayyyy whaddup
+    - @Bbonjour
+    - @bOey boss
+    - @b I said, helllllloooooO!!!!
+    - @oTWell hello there ;)
+    - @B bye
+    - @B goodbye
+    - @bosee you around
+    - @Bo see you later
+    - @see ya
+    - @b buh bye
+    - @ Bye
+    - @oTBye bye
+    - @Btadios
+    - @b adios?
+    - @bye :P
+    - @oTbye bot
+    - @Bbye bye
+    - @ot bye bye bot
+    - @B bye for now
+    - @Bo bye udo
+    - @BT bye was nice talking to you
+    - @B bye!
+    - @oTbyee
+    - @ot catch you later
+    - @Bo ciao
+    - @bOcya
+    - @btfarewell
+    - @b good bye
+    - @Bo good bye rasa bot!
+    - @bOgood night
+    - @bOgoodbye
+    - @Bo goodbye.
+    - @Bo goodnight
+    - @b gotta go
+    - @ot ok Bye
+    - @bo ok bye
+    - @Bo ok, bye
+    - @BT ok.bye
+    - @see u later
+    - @bsee ya
+    - @btsee you
+    - @ see you . bye
+    - @take care
+    - @ then bye
+    - @ tlak to you later
+    - @b toodle-oo
+    - @BT byr
+    - @ot thanks!
+    - @ thank you
+    - @bOthanks a lot
+    - @bOgreat thanks
+    - @bOappreciate it
+    - @oTcool thanks
+    - @B Cool. Thanks
+    - @ot Great, thanks
+    - @b Thank you so much
+    - @Thank's!
+    - @Bo Thanks bot
+    - @ Thanks for that
+    - @BT Thanks!
+    - @B amazing, thanks
+    - @oTcool thank you
+    - @ cool, thanks
+    - @danke
+    - @bOgreat thanks
+    - @ok thanks
+    - @bo ok thanks
+    - @book thanks!
+    - @ perfect thank you
+    - @BT thank u
+    - @BT thank you
+    - @btthank you anyways
+    - @bo thanks
+    - @BT thanks a bunch for everything
+    - @bo thanks a lot
+    - @bthanks for the help
+    - @bOthanks you
+    - @ot thanks!
+    - @Btthankyou
+    - @Btthnks
+    - @BT thx
+    - @byes thanks
+    - @bthanks for your information
+    - @bo thanks f
+    - @b yes
+    - @Bo yes please
+    - @ot yes I would
+    - @btplease do
+    - @Bo yup
+    - @ot yep
+    - @oTthat's right
+    - @btindeed
+    - @bOYes, please
+    - @yeah
+    - @oTsure
+    - @b yes thanks
+    - @b That would be great
+    - @ot YES
+    - @bo YUP
+    - @Yea
+    - @oTYeah
+    - @BYeah sure
+    - @B Yep
+    - @b Yep that's fine
+    - @btYep!
+    - @oTYepp
+    - @BtYes
+    - @Yes I do
+    - @bYes please
+    - @BtYes please!
+    - @BtYes, I accept
+    - @B sounds good
+    - @no
+    - @Btnope
+    - @no thanks
+    - @B not that one
+    - @Bo don't use that
+    - @ot please no
+    - @ no don't do that
+    - @no, use abraham.lincoln@example.com
+    - @ot Neither
+    - @ Never
+    - @B Nevermind
+    - @ot No thank you
+    - @bo No, not really.
+    - @boNo, thank you
+    - @bNo.
+    - @BT Nopes
+    - @Bo Not really
+    - @boabsolutely not
+    - @oTdecline
+    - @bodefinitely not
+    - @ot deny
+    - @ na
+    - @bnah
+    - @Btnah I'm good
+    - @ are you a bot?
+    - @are you a human?
+    - @ am I talking to a bot?
+    - @oTam I talking to a human?
+    - @b you are a bot right
+    - @b aren't you a bot
+    - @B Are you a bot?
+    - @bo are you a BOT
+    - @boare you a bot?
+    - @b are you a chatbot
+    - @bOare you a rasa bot?
+    - @Bo are you a real bot?
+    - @bare you a robot
+    - @b are you ai
+    - @ot are you artificial
+    - @Btare you artificial intelligence
+    - @Bo are you bot
+    - @bo are you bot?
+    - @btare you rasa bot?
+    - @ are you real
+    - @bOare you real lol
+    - @ot are you really a bot
+    - @bo are you robot
+    - @bare you sure that you're a bot?
+    - @bbot?
+    - @bocuz you are a bot
+    - @B i guess you are a chatbot
+    - @B oh are you chatbot?
+    - @B tell me, are you a bot?
+    - @bo what are you, a bot?
+    - @oTyou are a robot
+    - @Byou are ai
+    - @Bo you are chatbot
+    - @Bo you're a bot
+    - @Btyou robo
+    - @B real bot then?
+    - @bOare you really a bbot?
+    - @bOI need help
+    - @bowhat can you help me with
+    - @bocan you help me
+    - @bowhat can you do
+    - @B I need some help
+    - @ help me
+    - @bocan you please help me
+    - @problem
+    - @Bbig problem
+    - @bOHow can you help me
+    - @boHow you help me?
+    - @BtI need some help
+    - @oTWhat are my options
+    - @B What are you able to do?
+    - @btWhat can I ask you?
+    - @BWhat can I do?
+    - @BT What can you demo
+    - @btWhat can you do for me?
+    - @bWhat can you do?
+    - @bOWhat can you tell me?
+    - @BT What do you do
+    - @boanything els
+    - @bo are there any other options?
+    - @b can I ask you anything else?
+    - @ot can you do anything else?
+    - @b can you help me?
+    - @ot come back
+    - @b cool! can I do something else here?
+    - @bOhello what can you do for me
+    - @Bhelp
+    - @Bthelp me
+    - @B help please
+    - @Bhelp pls
+    - @Bthelp?
+    - @ot hep me
+    - @bowhat is the square root of 5
+    - @I want to know the weather
+    - @Btwhat is the meaning of life.
+    - @btFridge Isn't Running
+    - @Bmy tv isn't working
+    - @bomy washing machine isn't working
+    - @btwhat year is it
+    - @bowhat is the weather today
+    - @bo what is the weather
+    - @b how old are you?
+    - @bo add two plus two
+    - @b Hdjejene
+    - @ asd
+    - @BT title
+    - @Bthow about the forecast
+    - @foolish
+    - @BT joke
+    - @bCan YouTube talk?
+    - @Bo Can you call me back ?
+    - @Bo Can you give me your datacenter's password
+    - @btCan you give me your datacenter's password?
+    - @B Can you please send me an uber
+    - @I like [hiking](attraction)
+    - @B I prefer [city tour](attraction)
+    - @bo [water sports](attraction)
+    - @bt [Parks](attraction) 
+    - @ot I love [Factory Tours](attraction)
+    - @Bt I don't mind [Theaters](attraction)
+    - @BT I really like [Libraries](attraction)
+    - @Bo[Musums](attraction) is interesting 
+    - @b I'd rather go to a [Spa](attraction)
+    - @Any kind of [meat](attraction)
+    - @bb [fish](cuisine)
+    - @bo let's have a [private tour](attraction)
+    - @Bo how about [Art museums](attraction)
+    - @b [water park](attraction) sounds good
+    - @bt somewhere in [Delft](location)
+    - @BOsomewhere near the [central station](location)
+    - @T let's find something to eat in [Rotterdam](location)
+    - @Bto [den hoven](location)
+    - @bo Can you recommand me a local attraction?
+    - @b I don't know what to visit?
+    - @bt I'm looking for attractions.
+    - @attractions
+    - @ attraction
+    - @bo find me a attraction
+    - @B find me somewhere to visit
+    - @Bt can you recommand some place to have fun 
+    - @bt please help me find a [museum](attraction) 
+    - @Bt local attraction 
+    - @BoI want to visit museum
+    - @t museum
+    - @o find me local attractions
+    - @t I'm looking for somewhere interesting to visit 
+    - @Bt exhibitions 
+    - @bb a place to visit

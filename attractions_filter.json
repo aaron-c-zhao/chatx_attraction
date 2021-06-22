@@ -1,0 +1,838 @@
+{
+	"filter_sections": [
+		{
+			"label": "Sort by",
+			"section_id": "sort",
+			"filter_groups": [
+				{
+					"type": "single_select",
+					"key": "sort",
+					"tracking_key": "sort",
+					"label": "Sort by",
+					"options": [
+						{
+							"label": "Traveler Favorites",
+							"value": "ml_score",
+							"selected": true,
+							"default": true,
+							"single_select": true
+						},
+						{
+							"label": "Traveler Ranked",
+							"value": "ranking",
+							"selected": false,
+							"default": false,
+							"single_select": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Minimum Traveler Rating",
+			"section_id": "min_rating",
+			"filter_groups": [
+				{
+					"type": "single_select",
+					"key": "min_rating",
+					"tracking_key": "rating",
+					"label": "Minimum Traveler Rating",
+					"options": [
+						{
+							"label": "3",
+							"value": "3",
+							"selected": false,
+							"count": "110",
+							"default": false
+						},
+						{
+							"label": "4",
+							"value": "4",
+							"selected": false,
+							"count": "100",
+							"default": false
+						},
+						{
+							"label": "5",
+							"value": "5",
+							"selected": false,
+							"count": "32",
+							"default": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Attraction Category",
+			"section_id": "subcategory",
+			"filter_groups": [
+				{
+					"type": "single_select",
+					"key": "subcategory",
+					"tracking_key": "category",
+					"label": "Attraction Category",
+					"options": [
+						{
+							"label": "Boat Tours & Water Sports",
+							"value": "55",
+							"selected": false,
+							"count": "8",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Fun & Games",
+							"value": "56",
+							"selected": false,
+							"count": "21",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Nature & Parks",
+							"value": "57",
+							"selected": false,
+							"count": "8",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Sights & Landmarks",
+							"value": "47",
+							"selected": false,
+							"count": "33",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Food & Drink",
+							"value": "36",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Concerts & Shows",
+							"value": "58",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Shopping",
+							"value": "26",
+							"selected": false,
+							"count": "19",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Museums",
+							"value": "49",
+							"selected": false,
+							"count": "17",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "All",
+							"value": "0",
+							"selected": true,
+							"count": "133",
+							"default": true,
+							"single_select": true
+						},
+						{
+							"label": "Traveler Resources",
+							"value": "60",
+							"selected": false,
+							"count": "3",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Outdoor Activities",
+							"value": "61",
+							"selected": false,
+							"count": "18",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Spas & Wellness",
+							"value": "40",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Classes & Workshops",
+							"value": "41",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Water & Amusement Parks",
+							"value": "52",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Tours",
+							"value": "42",
+							"selected": false,
+							"count": "30",
+							"default": false,
+							"single_select": false
+						},
+						{
+							"label": "Nightlife",
+							"value": "20",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Attraction Type",
+			"section_id": "subtype",
+			"parent_section_id": "subcategory",
+			"filter_groups": [
+				{
+					"type": "multi_select",
+					"key": "subtype",
+					"tracking_key": "type",
+					"label": "Attraction Type",
+					"options": [
+						{
+							"label": "Playgrounds",
+							"value": "45",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "57"
+						},
+						{
+							"label": "Visitor Centers",
+							"value": "48",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "60"
+						},
+						{
+							"label": "Stand-Up Paddleboarding",
+							"value": "270",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Scuba & Snorkeling",
+							"value": "194",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Paint & Pottery Studios",
+							"value": "272",
+							"selected": false,
+							"count": "3",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Game & Entertainment Centers",
+							"value": "110",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Rides & Activities",
+							"value": "278",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Private Tours",
+							"value": "235",
+							"selected": false,
+							"count": "8",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Self-Guided Tours & Rentals",
+							"value": "237",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Theaters",
+							"value": "116",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "58"
+						},
+						{
+							"label": "Water Parks",
+							"value": "118",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "52"
+						},
+						{
+							"label": "Movie Theaters",
+							"value": "97",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Sacred & Religious Sites",
+							"value": "10",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Bars & Clubs",
+							"value": "99",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "20"
+						},
+						{
+							"label": "Gardens",
+							"value": "58",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false,
+							"parent_id": "57"
+						},
+						{
+							"label": "Historic Sites",
+							"value": "17",
+							"selected": false,
+							"count": "7",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Historic Walking Areas",
+							"value": "19",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Specialty Museums",
+							"value": "161",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false,
+							"parent_id": "49"
+						},
+						{
+							"label": "Points of Interest & Landmarks",
+							"value": "163",
+							"selected": false,
+							"count": "18",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Bar, Club & Pub Tours",
+							"value": "240",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "20"
+						},
+						{
+							"label": "All",
+							"value": "0",
+							"selected": true,
+							"count": "133",
+							"default": true,
+							"single_select": true
+						},
+						{
+							"label": "Art Galleries",
+							"value": "1",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "49"
+						},
+						{
+							"label": "Day Trips",
+							"value": "287",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Boat Tours",
+							"value": "167",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Architectural Buildings",
+							"value": "3",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Coffee & Tea Tours",
+							"value": "202",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Spas",
+							"value": "127",
+							"selected": false,
+							"count": "3",
+							"default": false,
+							"single_select": false,
+							"parent_id": "40"
+						},
+						{
+							"label": "Food Tours",
+							"value": "204",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Bowling Alleys",
+							"value": "128",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Room Escape Games",
+							"value": "208",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Scavenger Hunts",
+							"value": "209",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Libraries",
+							"value": "21",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "60"
+						},
+						{
+							"label": "Monuments & Statues",
+							"value": "26",
+							"selected": false,
+							"count": "3",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Art Museums",
+							"value": "28",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "49"
+						},
+						{
+							"label": "Churches & Cathedrals",
+							"value": "175",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Sports Complexes",
+							"value": "131",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "56"
+						},
+						{
+							"label": "Breweries",
+							"value": "133",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "36"
+						},
+						{
+							"label": "Adrenaline & Extreme Tours",
+							"value": "212",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Bike Tours",
+							"value": "214",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Antique Stores",
+							"value": "137",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "26"
+						},
+						{
+							"label": "Sightseeing Tours",
+							"value": "139",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Parks",
+							"value": "70",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "57"
+						},
+						{
+							"label": "Hiking & Camping Tours",
+							"value": "219",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "History Museums",
+							"value": "30",
+							"selected": false,
+							"count": "4",
+							"default": false,
+							"single_select": false,
+							"parent_id": "49"
+						},
+						{
+							"label": "Scenic Drives",
+							"value": "74",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Scenic Walking Areas",
+							"value": "76",
+							"selected": false,
+							"count": "2",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Neighborhoods",
+							"value": "34",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "47"
+						},
+						{
+							"label": "Science Museums",
+							"value": "35",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "49"
+						},
+						{
+							"label": "Walking Tours",
+							"value": "183",
+							"selected": false,
+							"count": "8",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Yoga & Pilates",
+							"value": "260",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "40"
+						},
+						{
+							"label": "Water Sports",
+							"value": "184",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Lessons & Workshops",
+							"value": "185",
+							"selected": false,
+							"count": "3",
+							"default": false,
+							"single_select": false,
+							"parent_id": "41"
+						},
+						{
+							"label": "Factory Tours",
+							"value": "141",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Gear Rentals",
+							"value": "186",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Other Outdoor Activities",
+							"value": "263",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Boat Rentals",
+							"value": "187",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "Gift & Specialty Shops",
+							"value": "144",
+							"selected": false,
+							"count": "15",
+							"default": false,
+							"single_select": false,
+							"parent_id": "26"
+						},
+						{
+							"label": "Other Nature & Parks",
+							"value": "266",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "57"
+						},
+						{
+							"label": "Horse-Drawn Carriage Tours",
+							"value": "267",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						},
+						{
+							"label": "City Tours",
+							"value": "224",
+							"selected": false,
+							"count": "13",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Gay Clubs & Bars",
+							"value": "103",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "20"
+						},
+						{
+							"label": "Cultural Tours",
+							"value": "225",
+							"selected": false,
+							"count": "5",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Photography Tours",
+							"value": "269",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Historical & Heritage Tours",
+							"value": "228",
+							"selected": false,
+							"count": "6",
+							"default": false,
+							"single_select": false,
+							"parent_id": "42"
+						},
+						{
+							"label": "Dance Clubs & Discos",
+							"value": "109",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "20"
+						},
+						{
+							"label": "Hiking Trails",
+							"value": "87",
+							"selected": false,
+							"count": "1",
+							"default": false,
+							"single_select": false,
+							"parent_id": "61"
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "",
+			"section_id": "bookable_first",
+			"filter_groups": [
+				{
+					"type": "single_select",
+					"key": "bookable_first",
+					"tracking_key": "onlinebookable",
+					"label": "Book online first",
+					"options": [
+						{
+							"label": "Book online first",
+							"value": "true",
+							"selected": false,
+							"count": "1",
+							"default": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

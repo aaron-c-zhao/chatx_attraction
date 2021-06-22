@@ -1,0 +1,47 @@
+version: "2.0"
+
+stories:
+
+- story: greet
+  steps:
+    - intent: tobot.greet
+    - action: utter_greet
+
+- story: find_attraction_happy_path 
+  steps:
+    - intent: tobot.search_for_attraction
+    - action: attraction_form
+    - active_loop: attraction_form
+    - action: action_confirm_attraction_preference
+    - intent: tobot.affirm
+    - action: action_send_query
+
+- story: ask user for location preference when attraction slot was set happy path
+  steps:
+  - intent: group_chat
+  - action: action_monitor_groupchat
+  - action: attraction_form
+  - active_loop: attraction_form
+  - action: action_confirm_attraction_preference
+  - intent: tobot.affirm
+  - action: action_send_query
+
+- story: find_attraction_sad_path
+  steps:
+    - intent: tobot.search_for_attraction
+    - action: attraction_form
+    - active_loop: attraction_form
+    - action: action_confirm_attraction_preference
+    - intent: tobot.deny
+    - action: action_reset_preferences
+
+
+- story: ask user for location preference when attraction slot was set sad path
+  steps:
+  - intent: group_chat
+  - action: action_monitor_groupchat
+  - action: attraction_form
+  - active_loop: attraction_form
+  - action: action_confirm_attraction_preference
+  - intent: tobot.deny
+  - action: action_reset_preferences

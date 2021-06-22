@@ -1,0 +1,89 @@
+version: "2.0"
+
+intents:
+  - tobot.greet:
+      use_entities: []
+  - tobot.goodbye:
+      use_entities: []
+  - tobot.thank:
+      use_entities: []
+  - tobot.affirm
+  - tobot.deny
+  - tobot.bot_challenge:
+      use_entities: []
+  - tobot.help
+  - tobot.search_for_attraction
+  - tobot.out_of_scope:
+      use_entities: []
+  - tobot.inform
+  - group_chat 
+
+
+entities:
+  - location
+  - attraction
+
+slots:
+  location: 
+    type: text
+    influence_conversation: false
+  attraction: 
+    type: text
+    influence_conversation: false
+
+
+responses:
+  utter_greet:
+  - text: "Hi! I'm your search assistant. What are you searching for today?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I'm your search assistant. Try ask me someting like: Can you recommand a attraction?"
+
+  utter_attraction_rcommendation:
+  - text: "Okay! Looking for attraction for {cuisine} at {location}..."
+
+  utter_ok:
+  - text: "Okay!"
+
+  utter_you_are_welcome:
+  - text: "You are welcome!"
+
+  utter_ignore:
+  - text: ""
+
+
+  # ----------- attraction form actions -------------------------
+  utter_ask_attraction:
+  - text: "What type of attraction are you looking for? Food Tour? Hiking Trail?"
+
+  utter_ask_location:
+  - text: "Do you have a prefered location?"
+
+  # ----------- end attraction form actions ---------------------
+
+
+actions:
+  - action_confirm_attraction_preference
+  - action_send_query
+  - action_monitor_groupchat
+  - action_reset_preferences
+
+
+forms:
+  attraction_form:
+    required_slots:
+      attraction:
+        - type: from_entity 
+          entity: cuisine
+      location:
+        - type: from_entity
+          entity: location
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
