@@ -77,7 +77,7 @@ forms:
     required_slots:
       attraction:
         - type: from_entity 
-          entity: cuisine
+          entity: attraction
       location:
         - type: from_entity
           entity: location

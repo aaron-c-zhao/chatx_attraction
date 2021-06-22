@@ -362,8 +362,10 @@ nlu:
     - @BoT somewhere near the [central station](location)
     - @bOT let's find something to eat in [Rotterdam](location)
     - @BOT [den hoven](location)
+    - @bot [food tour](attraction)
+    - @bot [city tour](attraction) sounds fun
 
-- intent: tobot.search_for_restaurant 
+- intent: tobot.search_for_attraction 
   examples: |
     - @bOT Can you recommand me a local attraction?
     - @Bot I don't know what to visit?

@@ -54,11 +54,12 @@ class ActionSendQuery(Action):
         
     def __findCuisineId(self, tracker):
         targetCuisine = tracker.slots['attraction'].lower()
-        res = difflib.get_close_matches(targetCuisine, attractionType)
+        res = difflib.get_close_matches(targetCuisine, attractionType.keys())
         if not len(res):
             return 'undefined'
         else:
-            return res[0]
+            print(attractionType[res[0]])
+            return attractionType[res[0]]
         
 
     def run(self, dispatcher: CollectingDispatcher,
@@ -102,18 +103,24 @@ class ActionSendQuery(Action):
             "text": [],
             "type": "result"
         } 
-        for rest in res_json['data']:
-            if  'name' in rest:
-                result['text'].append({
-                    "name": rest['name'],
-                    "image": rest['photo']['images']['thumbnail'] if 'photo' in rest else "",
-                    "rating": rest['rating'],
-                    "price_level": rest['price_level'] if 'price_level' in rest else "",
-                    "website": rest['website'] if "website" in rest else "",
-                    "address": rest['address'],
-                    "type": rest['subcategory'] if "subcategory" in rest else ""
-                })
 
+        if 'data' in res_json:
+            for rest in res_json['data']:
+                if  'name' in rest:
+                    result['text'].append({
+                        "name": rest['name'],
+                        "image": rest['photo']['images']['thumbnail'] if 'photo' in rest else "",
+                        "rating": rest['rating'],
+                        "price_level": rest['price_level'] if 'price_level' in rest else "",
+                        "website": rest['website'] if "website" in rest else "",
+                        "address": rest['address'],
+                        "type": rest['subcategory'] if "subcategory" in rest else ""
+                    })
+
+        else:
+            result['type'] = 'text'
+            result['text'] = "Sorry, I can not find anything."
+        
         dispatcher.utter_message(
             json_message= result
         )
